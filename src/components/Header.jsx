@@ -30,7 +30,7 @@ function Header({openModal,setOpenModal,setShop,shopCard,state,setState}) {
       region:e.target.region.value,
       description:e.target.description.value,
     }
-    if (!dates.name && !dates.region && !dates.price) {
+    if (dates.name && dates.region && dates.price) {
       setState([...state,dates])
       e.target.reset()
       setOpenModal(openModal = false)
